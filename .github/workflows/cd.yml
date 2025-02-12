@@ -51,10 +51,10 @@ jobs:
         run: |
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key && chmod 600 private_key
           ssh -o StrictHostKeyChecking=no -i private_key ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
-            docker pull shegezzy/fastapi-app:latest
+            docker pull amehmathias/fastapi-app:latest
             docker stop fastapi-app || true
             docker rm fastapi-app || true
-            docker run -d -p 8000:8000 --name fastapi-app shegezzy/fastapi-app:latest
+            docker run -d -p 8000:8000 --name fastapi-app amehmathias/fastapi-app:latest
           EOF
           rm -f private_key
         env:
