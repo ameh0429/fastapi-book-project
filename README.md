@@ -5,6 +5,10 @@ The **FastAPI Book Project** is a simple REST API built using FastAPI. It provid
 
 This project's repository was forked from `hng12-devbot/fastapi-book-project` with the task to add a missing endpoint, set up a test pipeline, and configure the deployment process. The application should be served using Nginx.
 
+## Architecture Diagram
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vgoa7g7b8rgvsdq6ql47.png)
+
+
 ## Features
 - Retrieve book details by ID
 - CI pipeline using `pytest`
